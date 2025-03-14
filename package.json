@@ -4,7 +4,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
+    "start": "pm2 start index.js --name mobilebackend --watch",
+    "restart": "pm2 restart mobilebackend",
+    "stop": "pm2 stop mobilebackend",
+    "delete": "pm2 delete mobilebackend",
     "dev": "nodemon index.js"
   },
   "author": "",
