@@ -71,7 +71,119 @@ module.exports = {
       const plans = [
         {
           title: "Free Listing",
-          duration: "1 Month",
+          duration: "30 Days",
+          price: "Free",
+          features: {
+            "Number Of Listings": "1",
+            "Response Rate": "25",
+            "Position On Search": "2X More",
+            "Buyers Visibility": "Low",
+            "Verified Tag": "Limited",
+            "Visibility on Best Details": "No",
+            "Visibility on Latest Details": "No",
+            "Land Page AD": "No",
+            "Land Page Banner": "No",
+            "Listings Page Small ADS": "No",
+            "Dedicated Agent Support": "No",
+            Creatives: "No",
+            "Listing Support": "No",
+            "Meta ADS": "No",
+            "Prime Promition": "No",
+            CRM: "No",
+          },
+        },
+        {
+          title: "Basic",
+          duration: "120 Days",
+          price: 12999,
+          features: {
+            "Number Of Listings": "50",
+            "Response Rate": "50",
+            "Position On Search": "3X More",
+            "Buyers Visibility": "50%",
+            "Verified Tag": "Limited",
+            "Visibility on Best Details": "No",
+            "Visibility on Latest Details": "No",
+            "Land Page AD": "No",
+            "Land Page Banner": "No",
+            "Listings Page Small ADS": "No",
+            "Dedicated Agent Support": "No",
+            Creatives: "No",
+            "Listing Support": "No",
+            "Meta ADS": "No",
+            "Prime Promition": "No",
+            CRM: "No",
+          },
+        },
+        {
+          title: "Prime",
+          duration: "180 Days",
+          price: 25999,
+          isPopular: true,
+          features: {
+            "Number Of Listings": "150",
+            "Response Rate": "150",
+            "Position On Search": "5X More",
+            "Buyers Visibility": "80%",
+            "Verified Tag": "Unlimited",
+            "Visibility on Best Details": "yes",
+            "Visibility on Latest Details": "yes",
+            "Land Page AD": "yes",
+            "Land Page Banner": "yes",
+            "Listings Page Small ADS": "yes",
+            "Dedicated Agent Support": "yes",
+            Creatives: "yes",
+            "Listing Support": "yes",
+            "Meta ADS": "No",
+            "Prime Promition": "No",
+            CRM: "No",
+          },
+        },
+        {
+          title: "Prime Plus",
+          duration: "365 Days",
+          price: 39000,
+          features: {
+            "Number Of Listings": "250",
+            "Response Rate": "250",
+            "Position On Search": "5X More",
+            "Buyers Visibility": "100%",
+            "Verified Tag": "Unlimited",
+            "Visibility on Best Details": "yes",
+            "Visibility on Latest Details": "yes",
+            "Land Page AD": "yes",
+            "Land Page Banner": "yes",
+            "Listings Page Small ADS": "yes",
+            "Dedicated Agent Support": "yes",
+            Creatives: "yes",
+            "Listing Support": "yes",
+            "Meta ADS": "yes",
+            "Prime Promition": "yes",
+            CRM: "yes",
+          },
+        },
+      ];
+
+      // Send response
+      res.status(200).json({
+        success: true,
+        message: "Packages retrieved successfully",
+        data: plans,
+      });
+    } catch (error) {
+      res.status(500).json({
+        success: false,
+        message: "Error retrieving packages",
+        error: error.message,
+      });
+    }
+  },
+  getAllRentPackages: async (req, res) => {
+    try {
+      const plans = [
+        {
+          title: "Free Listing",
+          duration: "30 Days",
           price: "Free",
           features: {
             "Number Of Listings": "1",
@@ -117,7 +229,7 @@ module.exports = {
         },
         {
           title: "Prime",
-          duration: "6 Months",
+          duration: "180 Days",
           price: 20999,
           isPopular: true,
           features: {
@@ -178,124 +290,12 @@ module.exports = {
       });
     }
   },
-  getAllRentPackages: async (req, res) => {
-    try {
-      const plans = [
-        {
-          title: "Free Listing",
-          duration: "1 Month",
-          price: "Free",
-          features: {
-            "Number Of Listings": "1",
-            "Response Rate": "25",
-            "Position On Search": "2X More",
-            "Buyers Visibility": "Low",
-            "Verified Tag": "Limited",
-            "Visibility on Best Details": "No",
-            "Visibility on Latest Details": "No",
-            "Land Page AD": "No",
-            "Land Page Banner": "No",
-            "Listings Page Small ADS": "No",
-            "Dedicated Agent Support": "No",
-            Creatives: "No",
-            "Listing Support": "No",
-            "Meta ADS": "No",
-            "Prime Promition": "No",
-            CRM: "No",
-          },
-        },
-        {
-          title: "Basic",
-          duration: "120 Days",
-          price: 10999,
-          features: {
-            "Number Of Listings": "50",
-            "Response Rate": "50",
-            "Position On Search": "3X More",
-            "Buyers Visibility": "Medium",
-            "Verified Tag": "Limited",
-            "Visibility on Best Details": "No",
-            "Visibility on Latest Details": "No",
-            "Land Page AD": "No",
-            "Land Page Banner": "No",
-            "Listings Page Small ADS": "No",
-            "Dedicated Agent Support": "No",
-            Creatives: "No",
-            "Listing Support": "No",
-            "Meta ADS": "No",
-            "Prime Promition": "No",
-            CRM: "No",
-          },
-        },
-        {
-          title: "Prime",
-          duration: "6 Months",
-          price: 20999,
-          isPopular: true,
-          features: {
-            "Number Of Listings": "150",
-            "Response Rate": "150",
-            "Position On Search": "5X More",
-            "Buyers Visibility": "High",
-            "Verified Tag": "Unlimited",
-            "Visibility on Best Details": "yes",
-            "Visibility on Latest Details": "yes",
-            "Land Page AD": "yes",
-            "Land Page Banner": "yes",
-            "Listings Page Small ADS": "yes",
-            "Dedicated Agent Support": "yes",
-            Creatives: "yes",
-            "Listing Support": "yes",
-            "Meta ADS": "No",
-            "Prime Promition": "No",
-            CRM: "No",
-          },
-        },
-        {
-          title: "Prime Plus",
-          duration: "365 Days",
-          price: 35000,
-          features: {
-            "Number Of Listings": "250",
-            "Response Rate": "250",
-            "Position On Search": "5X More",
-            "Buyers Visibility": "High",
-            "Verified Tag": "Unlimited",
-            "Visibility on Best Details": "yes",
-            "Visibility on Latest Details": "yes",
-            "Land Page AD": "yes",
-            "Land Page Banner": "yes",
-            "Listings Page Small ADS": "yes",
-            "Dedicated Agent Support": "yes",
-            Creatives: "yes",
-            "Listing Support": "yes",
-            "Meta ADS": "yes",
-            "Prime Promition": "yes",
-            CRM: "yes",
-          },
-        },
-      ];
-
-      // Send response
-      res.status(200).json({
-        success: true,
-        message: "Packages retrieved successfully",
-        data: plans,
-      });
-    } catch (error) {
-      res.status(500).json({
-        success: false,
-        message: "Error retrieving packages",
-        error: error.message,
-      });
-    }
-  },
   getAllCommercialsPackages: async (req, res) => {
     try {
       const plans = [
         {
           title: "Free Listing",
-          duration: "1 Month",
+          duration: "30 Days",
           price: "Free",
           features: {
             "Number Of Listings": "1",
@@ -319,12 +319,12 @@ module.exports = {
         {
           title: "Basic",
           duration: "120 Days",
-          price: 10999,
+          price: 9999,
           features: {
             "Number Of Listings": "50",
             "Response Rate": "50",
             "Position On Search": "3X More",
-            "Buyers Visibility": "Medium",
+            "Buyers Visibility": "50%",
             "Verified Tag": "Limited",
             "Visibility on Best Details": "No",
             "Visibility on Latest Details": "No",
@@ -341,14 +341,14 @@ module.exports = {
         },
         {
           title: "Prime",
-          duration: "6 Months",
-          price: 20999,
+          duration: "180 Days",
+          price: 15999,
           isPopular: true,
           features: {
             "Number Of Listings": "150",
             "Response Rate": "150",
             "Position On Search": "5X More",
-            "Buyers Visibility": "High",
+            "Buyers Visibility": "80%",
             "Verified Tag": "Unlimited",
             "Visibility on Best Details": "yes",
             "Visibility on Latest Details": "yes",
@@ -366,12 +366,12 @@ module.exports = {
         {
           title: "Prime Plus",
           duration: "365 Days",
-          price: 35000,
+          price: 29000,
           features: {
             "Number Of Listings": "250",
             "Response Rate": "250",
             "Position On Search": "5X More",
-            "Buyers Visibility": "High",
+            "Buyers Visibility": "100%",
             "Verified Tag": "Unlimited",
             "Visibility on Best Details": "yes",
             "Visibility on Latest Details": "yes",
