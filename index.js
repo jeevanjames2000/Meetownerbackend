@@ -21,11 +21,11 @@ app.use(
 app.use(express.json());
 app.use("/api", Routes);
 app.use("/pay", paymentRoutes);
-const PORT = process.env.PORT || 5001;
+const PORT = process.env.PORT || 5002;
 const sslOptions = {
   key: fs.readFileSync("/home/ubuntu/Meetownerbackend/ssl/private-key.pem"),
   cert: fs.readFileSync("/home/ubuntu/Meetownerbackend/ssl/certificate.pem"),
 };
-https.createServer(sslOptions, app).listen(PORT, () => {
-  console.log(`🚀 HTTPS Server running on port ${PORT}`);
+https.createServer(sslOptions, app).listen(PORT, "0.0.0.0", () => {
+  console.log(`🚀 HTTPS Server running on https://0.0.0.0:${PORT}`);
 });
